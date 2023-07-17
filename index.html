@@ -6,6 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+  <script>
+    // const defaultTheme = require('tailwindcss/defaultTheme')
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter var', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
 <body>
     <div class="bg-gray-950 text-white ">
@@ -33,7 +53,7 @@
               <a href="#" class="text-sm font-semibold leading-6 text-white">Data thinking</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" class="text-sm font-semibold leading-6 text-white">Get in Touch <span aria-hidden="true">&rarr;</span></a>
+              <a href="mailto:rahul@greenalytix.ai" class="text-sm font-semibold leading-6 text-white">Get in Touch <span aria-hidden="true">&rarr;</span></a>
             </div>
           </nav>
           <!-- Mobile menu, show/hide based on menu open state. -->
@@ -63,7 +83,7 @@
                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Data thinking</a>
                   </div>
                   <div class="py-6">
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
+                    <a href="mailto:rahul@greenalytix.ai" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
                   </div>
                 </div>
               </div>
@@ -76,40 +96,26 @@
             <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
               <h1 class="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 xl:col-auto text-white">Purposeful, Responsible and Operable</h1>
               <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-                <p class="text-lg leading-8 text-gray-200">Can Data and AI be leveraged purposefully and responsibly to arrest Climate Change,
+                <p class="text-lg leading-8 text-gray-300">Can Data and AI be leveraged purposefully and responsibly to arrest Climate Change,
                   reverse Biodiversity loss and help operationalise Sustainability? </p>
                 <div class="mt-10 flex items-center gap-x-6">
-                  <a href="#" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Get in Touch</a>
+                  <a href="mailto:rahul@greenalytix.ai" class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Get in Touch</a>
                   <!-- <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a> -->
                 </div>
               </div>
-              <img src="./assets/images/home.jpeg" alt="" class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
+              <img src="./assets/images/home.jpeg" alt="" class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover object-right sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
             </div>
           </div>
           <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-gray-950 sm:h-32"></div>
         </div>
     </div>
-    <div class="bg-gray-950 py-24 sm:py-32">
+    <div class="bg-gray-950 py-24 sm:py-32 lg:py-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <div class="lg:pr-4">
-                    <div class="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
-                        <img class="absolute inset-0 h-full w-full object-cover brightness-125 " src="./assets/images/about.jpeg" alt="">
-                        <!-- <div class="absolute inset-0 bg-green-900 mix-blend-multiply"></div>
-                        <div class="absolute left-1/2 top-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl" aria-hidden="true">
-                            <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#f1c232] to-[#38761d] opacity-40" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-                        </div> -->
-                        <!-- <figure class="relative isolate">
-                            <svg viewBox="0 0 162 128" fill="none" aria-hidden="true" class="absolute -left-2 -top-4 -z-10 h-32 stroke-white/20">
-                            <path id="0ef284b8-28c2-426e-9442-8655d393522e" d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z" />
-                            <use href="#0ef284b8-28c2-426e-9442-8655d393522e" x="86" />
-                            </svg>
-                            <img src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="" class="h-12 w-auto">
-                            <blockquote class="mt-6 text-xl font-semibold leading-8 text-white">
-                            <p>“Amet amet eget tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare arcu gravida natoque erat et cursus tortor.”</p>
-                            </blockquote>
-                            <figcaption class="mt-6 text-sm leading-6 text-gray-300"><strong class="font-semibold text-white">Judith Rogers,</strong> CEO at Workcation</figcaption>
-                        </figure> -->
+                    <div class="relative overflow-hidden rounded-3xl bg-gray-900 lg:mt-20 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+                        <img class="absolute inset-0 h-full w-full object-cover aspect-auto" src="https://plus.unsplash.com/premium_photo-1681987447708-5ee4494d6d0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="">
+                       
                     </div>
                 </div>
                 <div>
@@ -117,7 +123,7 @@
                         <p class="text-base font-semibold leading-7 text-green-600">About</p>
                         <h1 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl text-white">Combining the power of Data and Artificial Intelligence with Sustainability
                           expertise </h1>
-                        <div class="max-w-xl text-gray-200">
+                        <div class="max-w-xl text-gray-300">
                             <p class="mt-6 ">At Greenalytix we strive to generate purposeful and operable Sustainability Intelligence
                               in a responsible way.</p>
                             <p class="mt-8">We combine the power of Data and Artificial Intelligence with deep domain expertise to
@@ -127,19 +133,19 @@
                                 <svg class="mt-1 h-5 w-5 flex-none text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                   <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span class="text-gray-200">How do you calculate Scope 3 emissions accurately and at pace with minimal effort?</span>
+                                <span class="text-gray-300">How do you calculate Scope 3 emissions accurately and at pace with minimal effort?</span>
                               </li>
                               <li class="flex gap-x-3">
                                 <svg class="mt-1 h-5 w-5 flex-none text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                   <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span class="text-gray-200">How do you gain actionable insights on Human and Social issues in your value chain?</span>
+                                <span class="text-gray-300">How do you gain actionable insights on Human and Social issues in your value chain?</span>
                               </li>
                               <li class="flex gap-x-3">
                                 <svg class="mt-1 h-5 w-5 flex-none text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                   <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span class="text-gray-200">How do you quantify Biodiversity loss and create actionable intelligence to reverse it?</span>
+                                <span class="text-gray-300">How do you quantify Biodiversity loss and create actionable intelligence to reverse it?</span>
                               </li>
                             </ul>
                             <p class="mt-8">With emerging regulations such as CSRD (Corporate Sustainability Reporting Directive)
@@ -152,21 +158,17 @@
             </div>
         </div>
     </div>
-    <div class="bg-gray-950 py-24 sm:py-32">
+    <div class="bg-gray-950 py-24 sm:py-32 lg:py-24">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Solving purposeful challenges</h2>
           <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
             <div>
-              <dt class="text-base font-semibold leading-7 text-white">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                  </svg>
-                </div>
+              <dt class="text-xl font-semibold leading-7 text-white">
+                <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/supplier.jpeg" alt="">
                 Supplier Intelligence, Scope 3 Intelligence
               </dt>
-              <dd class="mt-1 text-base leading-7 text-gray-200">Quantifying Social, Human capital issues and Governance risks in the supply chain can
+              <dd class="mt-1 text-base leading-7 text-gray-300">Quantifying Social, Human capital issues and Governance risks in the supply chain can
                 be complicated, given the lack of data. Calculating and reducing Scope 3 emissions is
                 equally cumbersome. <br>
                 AI techniques such as Natural Language Processing and Geospatial Intelligence
@@ -178,45 +180,33 @@
                 database automatically.</dd>
             </div>
             <div>
-              <dt class="text-base font-semibold leading-7 text-white">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                  </svg>
-                </div>
+              <dt class="text-xl font-semibold leading-7 text-white">
+                <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/finance.jpeg" alt="">
                 Sustainable Finance Intelligence
               </dt>
-              <dd class="mt-1 text-base leading-7 text-gray-200">As an investor, lender you are expected to know your customer’s Carbon profile. Even
+              <dd class="mt-1 text-base leading-7 text-gray-300">As an investor, lender you are expected to know your customer’s Carbon profile. Even
                 though your customers may not know it. And you are being held accountable for year-
                 on-year emissions reductions in your portfolio. <br>
                 This is going to be hard and challenging and needs a rigorous data driven and
                 automated approach to measure and reduce emissions year on year.</dd>
             </div>
             <div>
-              <dt class="text-base font-semibold leading-7 text-white">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
-                  </svg>
-                </div>
+              <dt class="text-xl font-semibold leading-7 text-white">
+                <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/social.jpeg" alt="">
                 Social Intelligence
               </dt>
-              <dd class="mt-1 text-base leading-7 text-gray-200">Advanced AI techniques to evaluate socio-political impacts on large Capital Projects
+              <dd class="mt-1 text-base leading-7 text-gray-300">Advanced AI techniques to evaluate socio-political impacts on large Capital Projects
                 and Liability projects. Managing emerging Social issues is a key challenge for large
                 corporations. Automated monitoring of Social Media data to derive intelligence about
                 upcoming protests, petitions and fund raising activities against approved Capital
                 projects is very impactful in managing stakeholder expectations.</dd>
             </div>
             <div>
-              <dt class="text-base font-semibold leading-7 text-white">
-                <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                  <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                  </svg>
-                </div>
+              <dt class="text-xl font-semibold leading-7 text-white">
+                <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/biodiversity.jpeg" alt="">
                 Biodiversity Loss Intelligence
               </dt>
-              <dd class="mt-1 text-base leading-7 text-gray-200">With TNFD around the corner, enterprises are preparing to take stock of Nature related
+              <dd class="mt-1 text-base leading-7 text-gray-300">With TNFD around the corner, enterprises are preparing to take stock of Nature related
                 impacts. The EU Nature Restoration Law will soon bring mandatory reporting and
                 accountability for biodiversity loss. A strong data driven approach with responsible
                 automations is going to be key to measure and drive performance to start restoring
@@ -227,85 +217,7 @@
       </div>
     </div>
     
-    <!-- <div class="bg-gray-950 py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-green-600">Use Cases</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Solving purposeful challenges</p>
-            <p class="mt-6 text-lg leading-8 text-gray-200">Greenalytix combines the power of Data and Artificial Intelligence with deep domain expertise to solve complex ESG and sustainability problems by leveraging the Greenalytix IDEA (Intelligence, Data Exploration and Analysis) platform.</p>
-          </div>
-          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-white">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                    </svg>
-                  </div>
-                  Supplier Intelligence, Scope 3 Intelligence
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-200">Quantifying Social, Human capital issues and Governance risks in the supply chain can
-                  be complicated, given the lack of data. Calculating and reducing Scope 3 emissions is
-                  equally cumbersome. <br>
-                  AI techniques such as Natural Language Processing and Geospatial Intelligence
-                  enable you to collect supplier adverse media data, environmental incidents and conduct
-                  sentiment analysis of your value chain. <br>
-                  AI powered automations make the process of Scope 3 data collection easier. For
-                  example, Cognitive automations can extract energy consumption data values from
-                  energy bills (PDFs or similar other documents) to populate an Operational ESG
-                  database automatically.</dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-white">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                  </div>
-                  Sustainable Finance Intelligence
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-200">As an investor, lender you are expected to know your customer’s Carbon profile. Even
-                  though your customers may not know it. And you are being held accountable for year-
-                  on-year emissions reductions in your portfolio. <br>
-                  This is going to be hard and challenging and needs a rigorous data driven and
-                  automated approach to measure and reduce emissions year on year.</dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-white">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                    </svg>
-                  </div>
-                  Social Intelligence
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-200">Advanced AI techniques to evaluate socio-political impacts on large Capital Projects
-                  and Liability projects. Managing emerging Social issues is a key challenge for large
-                  corporations. Automated monitoring of Social Media data to derive intelligence about
-                  upcoming protests, petitions and fund raising activities against approved Capital
-                  projects is very impactful in managing stakeholder expectations.</dd>
-              </div>
-              <div class="relative pl-16">
-                <dt class="text-base font-semibold leading-7 text-white">
-                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                    </svg>
-                  </div>
-                  Biodiversity Loss Intelligence
-                </dt>
-                <dd class="mt-2 text-base leading-7 text-gray-200">With TNFD around the corner, enterprises are preparing to take stock of Nature related
-                  impacts. The EU Nature Restoration Law will soon bring mandatory reporting and
-                  accountability for biodiversity loss. A strong data driven approach with responsible
-                  automations is going to be key to measure and drive performance to start restoring
-                  nature.</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-    </div>  -->
-    <div class="overflow-hidden bg-gray-950 py-24 sm:py-32">
+    <div class="overflow-hidden bg-gray-950 py-24 sm:py-32 lg:py-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div class="lg:pr-8 lg:pt-4">
@@ -314,7 +226,7 @@
                 <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">IDEA Platform</p>
                 <p class="mt-6 text-lg leading-8 text-gray-300">The greenalytix IDEA (Intelligence, Data Exploration and Analysis) platform has
                   three layers:</p>
-                <ul class="list-disc list-inside mt-4 text-gray-200">
+                <ul class="list-disc list-inside mt-4 text-gray-300">
                   <li>ESG/Sustainability Data Acquisition – AQUIRE</li>
                   <li>ESG /Sustainability Data Deep Analysis – ANALYSE</li>
                   <li>ESG / Sustainability Data Reporting and Visualisation – VISUALISE</li>
@@ -370,25 +282,18 @@
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-5">
         <div class="mx-auto max-w-2xl lg:mx-0 xl:col-span-2">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our team</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-200">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
         </div>
         <ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-3">
           <li>
             <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
             <h3 class="mt-6 text-lg font-semibold leading-8 text-white">Manish Godkhindi</h3>
-            <p class="text-base leading-7 text-gray-200">Co-Founder</p>
-            <p class="mt-4 text-base leading-7 text-gray-200">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
+            <p class="text-base leading-7 text-gray-300">Co-Founder</p>
+            <p class="mt-4 text-base leading-7 text-gray-300">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
             <ul role="list" class="mt-6 flex gap-x-6">
+             
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <a href="https://www.linkedin.com/in/manishgodkhindi/" target="_blank" class="text-gray-400 hover:text-gray-500">
                   <span class="sr-only">LinkedIn</span>
                   <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
@@ -400,19 +305,12 @@
           <li>
             <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
             <h3 class="mt-6 text-lg font-semibold leading-8 text-white">Rahul Jain</h3>
-            <p class="text-base leading-7 text-gray-200">Co-Founder</p>
-            <p class="mt-4 text-base leading-7 text-gray-200">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
+            <p class="text-base leading-7 text-gray-300">Co-Founder</p>
+            <p class="mt-4 text-base leading-7 text-gray-300">A professional business builder, profit shaper, people developer, active connector and agile player with passion and drive to build IT businesses with more than 25 years IT experience in various industries including Insurance and Banking, Pharma and Retail and CPG.</p>
             <ul role="list" class="mt-6 flex gap-x-6">
+              
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <a href="https://www.linkedin.com/in/rahul-jain-1320681/" target="_blank" class="text-gray-400 hover:text-gray-500">
                   <span class="sr-only">LinkedIn</span>
                   <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
@@ -424,17 +322,10 @@
           <li>
             <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
             <h3 class="mt-6 text-lg font-semibold leading-8 text-white">Peeyush Taori</h3>
-            <p class="text-base leading-7 text-gray-200">Co-Founder</p>
-            <p class="mt-4 text-base leading-7 text-gray-200">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
+            <p class="text-base leading-7 text-gray-300">Co-Founder</p>
+            <p class="mt-4 text-base leading-7 text-gray-300">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
             <ul role="list" class="mt-6 flex gap-x-6">
-              <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
-              </li>
+              
               <li>
                 <a href="#" class="text-gray-400 hover:text-gray-500">
                   <span class="sr-only">LinkedIn</span>
@@ -447,20 +338,13 @@
           </li>
           <li>
             <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-            <h3 class="mt-6 text-lg font-semibold leading-8 text-white">Emma Dorsey</h3>
-            <p class="text-base leading-7 text-gray-200">Co-Founder</p>
-            <p class="mt-4 text-base leading-7 text-gray-200">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
+            <h3 class="mt-6 text-lg font-semibold leading-8 text-white">Anup Kabra</h3>
+            <p class="text-base leading-7 text-gray-300">Co-Founder</p>
+            <p class="mt-4 text-base leading-7 text-gray-300">Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.</p>
             <ul role="list" class="mt-6 flex gap-x-6">
+             
               <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
-                  <span class="sr-only">Twitter</span>
-                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-400 hover:text-gray-500">
+                <a href="https://www.linkedin.com/in/anup-kabra-7482907/" target="_blank" class="text-gray-400 hover:text-gray-500">
                   <span class="sr-only">LinkedIn</span>
                   <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
@@ -511,7 +395,7 @@
             <img src="./assets/images/logo.svg" alt="" class="h-5">
           </div>
           <div class="mt-8 md:order-1 md:mt-0">
-            <p class="text-center text-xs leading-5 text-gray-200">&copy; 2023 Greenalytix, Inc. All rights reserved.</p>
+            <p class="text-center text-xs leading-5 text-gray-300">&copy; 2023 Greenalytix, Inc. All rights reserved.</p>
           </div>
         </div>
       </footer>
