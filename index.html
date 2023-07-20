@@ -25,6 +25,15 @@
         },
       },
     }
+
+    $( document ).ready(function() {
+      $("#navOpen").on("click", function(){
+        $("#mobileNav").addClass('block').removeClass('hidden')
+      })
+      $("#closeNav").on("click", function(){
+        $("#mobileNav").addClass('hidden').removeClass('block')
+      })
+    });
   </script>
 </head>
 <body>
@@ -40,7 +49,7 @@
                   </a>
                 </div>
                 <div class="flex lg:hidden">
-                  <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                  <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" id="navOpen">
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -63,15 +72,15 @@
          
           <!-- Mobile menu, show/hide based on menu open state. -->
           <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="hidden" role="dialog" aria-modal="true"> 
+          <div class="hidden" role="dialog" aria-modal="true" id="mobileNav"> 
             <div class="fixed inset-0 z-50"></div>
-            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
                   <span class="sr-only">Greenalytix</span>
                   <img class="h-8 w-auto" src="./assets/images/logo.svg" alt="">
                 </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-100" id="closeNav">
                   <span class="sr-only">Close menu</span>
                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -81,14 +90,14 @@
               <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                   <div class="space-y-2 py-6">
-                    <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-                    <a href="#usecase" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Use Case</a>
-                    <a href="#ideaplatform" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Idea platform</a>
-                    <a href="#team" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Team</a>
-                    <a href="#datathinking" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Data thinking</a>
+                    <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Home</a>
+                    <a href="#usecase" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Use Case</a>
+                    <a href="#ideaplatform" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Idea platform</a>
+                    <a href="#team" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Team</a>
+                    <a href="#datathinking" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Data thinking</a>
                   </div>
                   <div class="py-6">
-                    <a href="mailto:rahul@greenalytix.ai" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Get In Touch</a>
+                    <a href="mailto:rahul@greenalytix.ai" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-900">Get In Touch</a>
                   </div>
                 </div>
               </div>
@@ -125,8 +134,10 @@
                 <div class="">
                     <div class="text-base leading-7 text-gray-700 lg:max-w-lg float-right">
                         <p class="text-base font-semibold leading-7 text-green-600">About</p>
+                        <img src="./assets/images/warmingstripes.png" alt="" class="my-3">
                         <h1 class="mt-2 text-3xl font-bold tracking-normal text-white sm:text-4xl text-white leading-[2.8rem]">Combining the power of Data and Artificial Intelligence with Sustainability
                           expertise </h1>
+                          <img src="./assets/images/biodiversityStripe.png" alt="" class="my-3"> 
                         <div class="max-w-xl text-gray-300">
                             <p class="mt-6 ">At Greenalytix we strive to generate purposeful and operable Sustainability Intelligence
                               in a responsible way.</p>
@@ -163,18 +174,20 @@
         </div>
     </div>
     <!-- use Cases -->
-    <div class="bg-gray-950 py-24 sm:py-32 lg:py-24" id="usecase">
+    <div class="bg-gray-950 py-24 sm:py-32 lg:py-24" id="usecase"> 
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
             <p class="text-base font-semibold leading-7 text-green-600">Use Case</p>
+            <img src="./assets/images/warmingstripes.png" alt="" class="my-3">
             <h2 class="mt-2 text-3xl font-bold tracking-normal text-white sm:text-4xl leading-[2.8rem]">Solving purposeful challenges</h2>
+            <img src="./assets/images/biodiversityStripe.png" alt="" class="my-3">
           </div>
           <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
             <div>
-              <dt class="text-xl font-semibold leading-7 text-white">
+              <dt class="text-lg font-semibold leading-7 text-white">
                 <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/supplier.jpeg" alt="">
-                Supplier Intelligence, Scope 3 Intelligence
+                <h3>Supplier Intelligence, Scope 3 Intelligence</h3>
               </dt>
               <dd class="mt-1 text-base leading-7 text-gray-300"> 
                 Quantifying Social, Human capital issues and Governance risks in the supply chain can
@@ -185,9 +198,9 @@
                 sentiment analysis of your value chain.</dd>
             </div>
             <div>
-              <dt class="text-xl font-semibold leading-7 text-white">
+              <dt class="text-lg font-semibold leading-7 text-white">
                 <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/finance.jpeg" alt="">
-                Sustainable Finance Intelligence
+                <h3>Sustainable Finance Intelligence</h3>
               </dt>
               <dd class="mt-1 text-base leading-7 text-gray-300">As an investor, lender you are expected to know your customer’s Carbon profile. Even
                 though your customers may not know it. And you are being held accountable for year-
@@ -196,9 +209,9 @@
                 automated approach to measure and reduce emissions year on year.</dd>
             </div>
             <div>
-              <dt class="text-xl font-semibold leading-7 text-white">
+              <dt class="text-lg font-semibold leading-7 text-white">
                 <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/social.jpeg" alt="">
-                Social Intelligence
+                <h3>Social Intelligence</h3>
               </dt>
               <dd class="mt-1 text-base leading-7 text-gray-300">Advanced AI techniques to evaluate socio-political impacts on large Capital Projects
                 and Liability projects. Managing emerging Social issues is a key challenge for large
@@ -207,9 +220,9 @@
                 projects is very impactful in managing stakeholder expectations.</dd>
             </div>
             <div>
-              <dt class="text-xl font-semibold leading-7 text-white">
+              <dt class="text-lg font-semibold leading-7 text-white">
                 <img class="aspect-[3/2] w-full rounded-2xl object-cover mb-8" src="./assets/images/biodiversity.jpeg" alt="">
-                Biodiversity Loss Intelligence
+                <h3>Biodiversity Loss Intelligence</h3>
               </dt>
               <dd class="mt-1 text-base leading-7 text-gray-300">With TNFD around the corner, enterprises are preparing to take stock of Nature related
                 impacts. The EU Nature Restoration Law will soon bring mandatory reporting and
@@ -228,7 +241,9 @@
             <div class="lg:pr-8 lg:pt-4">
               <div class="lg:max-w-lg">
                 <h2 class="text-base font-semibold leading-7 text-green-400">IDEA Platform</h2>
+                <img src="./assets/images/warmingstripes.png" alt="" class="my-3">
                 <p class="mt-2 text-3xl font-bold tracking-normal text-white sm:text-4xl leading-[2.8rem]">IDEA Platform</p>
+                <img src="./assets/images/biodiversityStripe.png" alt="" class="my-3">
                 <p class="mt-6 text-lg leading-8 text-gray-300">The greenalytix IDEA (Intelligence, Data Exploration and Analysis) platform has
                   three layers:</p>
                 <ul class="list-disc list-inside mt-4 text-gray-300">
@@ -289,7 +304,9 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <p class="text-base font-semibold leading-7 text-green-600">Team</p>
+          <img src="./assets/images/warmingstripes.png" alt="" class="my-3">
           <h2 class="text-3xl font-bold tracking-normal text-white sm:text-4xl leading-[2.8rem]">Our team</h2>
+          <img src="./assets/images/biodiversityStripe.png" alt="" class="my-3">
           <p class="mt-6 text-lg leading-8 text-gray-300">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
         </div>
         <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none">
@@ -373,7 +390,10 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div class="w-full lg:max-w-lg lg:flex-auto">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">From the blog</h2>
+            <p class="text-base font-semibold leading-7 text-green-600">Blog</p>
+            <img src="./assets/images/warmingstripes.png" alt="" class="my-3">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Data Thinking</h2>
+            <img src="./assets/images/biodiversityStripe.png" alt="" class="my-3">
             <p class="mt-6 text-xl leading-8 text-gray-200">Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id.</p>
             <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1344&h=1104&q=80" alt="" class="mt-16 aspect-[6/5] w-full rounded-2xl bg-gray-50 object-cover lg:aspect-auto lg:h-[34.5rem]">
           </div>
