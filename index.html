@@ -30,7 +30,12 @@
       $("#navOpen").on("click", function(){
         $("#mobileNav").addClass('block').removeClass('hidden')
       })
+
       $("#closeNav").on("click", function(){
+        $("#mobileNav").addClass('hidden').removeClass('block')
+      })
+
+      $(".greenalytixNav a").on("click", function(){
         $("#mobileNav").addClass('hidden').removeClass('block')
       })
     });
@@ -88,7 +93,7 @@
                 </button>
               </div>
               <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="-my-6 divide-y divide-gray-500/10 greenalytixNav">
                   <div class="space-y-2 py-6">
                     <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Home</a>
                     <a href="#usecase" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900">Use Case</a>
@@ -118,7 +123,7 @@
               </div>
               <img src="./assets/images/home.jpeg" alt="" class="mt-10 aspect-square w-full max-w-lg rounded-2xl object-cover object-right sm:mt-4 lg:order-2 lg:row-span-2 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-0">
             </div>
-          </div>x
+          </div>
           <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-gray-950 sm:h-32"></div>
         </div>
     </div>
@@ -385,8 +390,8 @@
         </ul>
       </div>
     </div>
-    <!-- blog 1 -->
-    <div class="bg-gray-950 py-32">
+    <!-- Data Thinking -->
+    <div class="bg-gray-950 py-32" id="datathinking">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div class="w-full lg:max-w-lg lg:flex-auto">
